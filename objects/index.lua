@@ -1,0 +1,5 @@
+require 'OOP-New.objects.compiletime'
+require 'OOP-New.objects.WarObject'
+require 'OOP-New.objects.WarObjects'
+require 'OOP-New.objects.WarMapObjects'
+require 'OOP-New.objects.WarMap'
