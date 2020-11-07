@@ -1,5 +1,5 @@
 ---@class ClassWarMap
-local WarMap = {}
+WarMap = {}
 
 -- Encapsulates a WC3 map during the compilation stage.
 ---@class WarMap
@@ -78,5 +78,3 @@ function WarMap:new()
     assignClass(obj, self)
     return obj
 end
-
-return WarMap

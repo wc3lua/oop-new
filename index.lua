@@ -1,8 +1,8 @@
 -- зависимости
-require 'OtherFunctions.index'
-require 'Lua-OOP-template.index'
+require 'modules.other-functions.index'
+require 'modules.oop-template.index'
 
 -- содержимое
 
 -- объекты РО
-require 'OOP-New.objects.index'
+require 'modules.oop-new.objects.index'

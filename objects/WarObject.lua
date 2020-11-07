@@ -1,5 +1,5 @@
 ---@class ClassWarObject
-local WarObject = {}
+WarObject = {}
 
 ---@class WarObject
 function WarObject:new()
@@ -62,5 +62,3 @@ function WarObject:new()
     assignClass(obj, self)
     return obj
 end
-
-return WarObject

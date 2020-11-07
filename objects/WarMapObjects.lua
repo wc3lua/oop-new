@@ -1,6 +1,6 @@
 -- Encapsulates all objects of all types in a map.
 ---@class ClassWarMapObjects
-local WarMapObjects = {}
+WarMapObjects = {}
 
 ---@class WarMapObjects
 function WarMapObjects:new()
@@ -30,5 +30,3 @@ function WarMapObjects:new()
     assignClass(obj, self)
     return obj
 end
-
-return WarMapObjects
