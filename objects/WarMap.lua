@@ -78,3 +78,5 @@ function WarMap:new()
     assignClass(obj, self)
     return obj
 end
+
+currentMap = WarMap:new()

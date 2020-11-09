@@ -6,3 +6,4 @@ require 'modules.oop-template.index'
 
 -- объекты РО
 require 'modules.oop-new.objects.index'
+require 'modules.oop-new.handles.index'
