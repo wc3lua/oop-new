@@ -1,32 +1,32 @@
 -- Encapsulates all objects of all types in a map.
 ---@class ClassWarMapObjects
-WarMapObjects = {}
-
+ClassWarMapObjects = newClass()
 ---@class WarMapObjects
-function WarMapObjects:new()
-    local obj = {} ---@type WarMapObjects
-    
-    ---@type WarObject
-    obj.ability = {} 
 
-    ---@type WarObject
-    obj.item = {}
+local class = ClassWarMapObjects
 
-    ---@type WarObject
-    obj.unit = {}
-
-    ---@type WarObject
-    obj.destructable = {}
-
-    ---@type WarObject
-    obj.doodad = {}
-
-    ---@type WarObject
-    obj.buff = {}
-
-    ---@type WarObject
-    obj.upgrade = {}
-
-    assignClass(obj, self)
-    return obj
+---@return WarMapObjects
+function class:new()
+    return newObject(self)
 end
+
+---@type WarObject
+class.ability = {}
+
+---@type WarObject
+class.item = {}
+
+---@type WarObject
+class.unit = {}
+
+---@type WarObject
+class.destructable = {}
+
+---@type WarObject
+class.doodad ={}
+
+---@type WarObject
+class.buff = {}
+
+---@type WarObject
+class.upgrade = {}
