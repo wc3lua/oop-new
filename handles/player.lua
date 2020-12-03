@@ -15,21 +15,41 @@ function class:get(number)
     return self:new(Player(number))
 end
 
+-- function getPlayer(number)
+--     return class:get(number)
+-- end
+
 function class:getLocal()
     return self:new(GetLocalPlayer())
 end
+
+-- function getLocalPlayer()
+--     return class:getLocal()
+-- end
 
 function class:triggered()
     return self:new(GetTriggerPlayer())
 end
 
+-- function getTriggerPlayer()
+--     return class:triggered()
+-- end
+
 function class:enumed()
     return self:new(GetEnumPlayer())
 end
 
+-- function getEnumPlayer()
+--     return class:enumed()
+-- end
+
 function class:filtered()
     return self:new(GetFilterPlayer())
 end
+
+-- function getFilterPlayer()
+--     return class:filtered()
+-- end
 
 ---@param whichUnit Unit
 function class:owner(whichUnit)
@@ -199,7 +219,7 @@ end
 ---@param techid integer|string
 ---@param maximum integer|nil
 function class:techMaxAllowed(techid, maximum)
-    techid = FormatCC(techid)
+    techid = formatCC(techid)
     if  not maximum then
         return GetPlayerTechMaxAllowed(self.handle, techid)
     else
@@ -211,21 +231,21 @@ end
 ---@param techid integer|string
 ---@param levels integer
 function class:addTechResearched(techid, levels)
-    AddPlayerTechResearched(self.handle, FormatCC(techid), levels)
+    AddPlayerTechResearched(self.handle, formatCC(techid), levels)
     return self
 end
 
 ---@param techid integer|string
 ---@param levels integer
 function class:decTechResearched(techid, levels)
-    BlzDecPlayerTechResearched(self.handle, FormatCC(techid), levels)
+    BlzDecPlayerTechResearched(self.handle, formatCC(techid), levels)
     return self
 end
 
 ---@param techid integer|string
 ---@param setToLevel_OR_specificOnly integer|boolean
 function class:techResearched(techid, setToLevel_OR_specificOnly)
-    techid = FourCC(techid)
+    techid = fourCC(techid)
     if  type(setToLevel_OR_specificOnly)=='boolean' then
         return GetPlayerTechResearched(self.handle, techid, setToLevel_OR_specificOnly)
     else
@@ -238,7 +258,7 @@ end
 ---@param specificonly boolexpr
 ---@return integer
 function class:techCount(techid, specificonly)
-    return GetPlayerTechCount(self.handle, FormatCC(techid), specificonly)
+    return GetPlayerTechCount(self.handle, formatCC(techid), specificonly)
 end
 
 ---@param newOwner integer
@@ -257,7 +277,7 @@ end
 ---@param abilid integer|string
 ---@param avail boolean
 function class:abilityAvailable(abilid, avail)
-    SetPlayerAbilityAvailable(self.handle, FourCC(abilid), avail)
+    SetPlayerAbilityAvailable(self.handle, fourCC(abilid), avail)
     return self
 end
 
@@ -296,7 +316,7 @@ end
 ---@param param5 integer
 ---@param param6 integer
 ---@return boolean
-function class.requestExtraBooleanData(dataType, param1, param2, param3, param4, param5, param6)
+function class:requestExtraBooleanData(dataType, param1, param2, param3, param4, param5, param6)
     return RequestExtraBooleanData(dataType, self.handle, param1, param2, param3, param4, param5, param6)
 end
 
@@ -308,7 +328,7 @@ end
 ---@param param5 integer
 ---@param param6 integer
 ---@return string
-function class.requestExtraStringData(dataType, param1, param2, param3, param4, param5, param6)
+function class:requestExtraStringData(dataType, param1, param2, param3, param4, param5, param6)
     return RequestExtraStringData(dataType, self.handle, param1, param2, param3, param4, param5, param6)
 end
 
@@ -320,7 +340,7 @@ end
 ---@param param5 integer
 ---@param param6 integer
 ---@return real
-function class.requestExtraRealData(dataType, param1, param2, param3, param4, param5, param6)
+function class:requestExtraRealData(dataType, param1, param2, param3, param4, param5, param6)
     return RequestExtraRealData(dataType, self.handle, param1, param2, param3, param4, param5, param6)
 end
 

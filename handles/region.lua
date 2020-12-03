@@ -1,6 +1,5 @@
 ---@class Region:Handle
 ClassRegion = extendedClass(ClassHandle)
-
 local class = ClassRegion
 
 ---@param regionHandle region

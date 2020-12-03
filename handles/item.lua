@@ -281,6 +281,19 @@ function class:removeAbility(abilCode)
 end
 
 ---@param whichField itembooleanfield
+---@return boolean
+function class:getBooleanField(whichField)
+    return BlzGetItemBooleanField(self.handle, whichField)
+end
+
+---@param whichField itembooleanfield
+---@param value boolean
+---@return boolean
+function class:setBooleanField(whichField, value)
+    return BlzSetItemBooleanField(self.handle, whichField, value)
+end
+
+---@param whichField itembooleanfield
 ---@param value boolean|nil
 ---@return boolean
 function class:booleanField(whichField, value)
@@ -289,6 +302,19 @@ function class:booleanField(whichField, value)
     else
         return BlzSetItemBooleanField(self.handle, whichField, value)
     end
+end
+
+---@param whichField itemintegerfield
+---@return integer
+function class:getIntegerField(whichField)
+    return BlzGetItemIntegerField(self.handle, whichField)
+end
+
+---@param whichField itemintegerfield
+---@param value integer
+---@return boolean
+function class:setIntegerField(whichField, value)
+    return BlzSetItemIntegerField(self.handle, whichField, value)
 end
 
 ---@param whichField itemintegerfield
@@ -303,6 +329,19 @@ function class:integerField(whichField, value)
 end
 
 ---@param whichField itemrealfield
+---@return real
+function class:getRealField(whichField)
+    return BlzGetItemRealField(self.handle, whichField)
+end
+
+---@param whichField itemrealfield
+---@param value real
+---@return boolean
+function class:setRealField(whichField, value)
+    return BlzSetItemRealField(self.handle, whichField, value)
+end
+
+---@param whichField itemrealfield
 ---@param value real|nil
 ---@return boolean
 function class:realField(whichField, value)
@@ -311,6 +350,19 @@ function class:realField(whichField, value)
     else
         return BlzSetItemRealField(self.handle, whichField, value)
     end
+end
+
+---@param whichField itemstringfield
+---@return boolean
+function class:getStringField(whichField)
+    return BlzGetItemStringField(self.handle, whichField)
+end
+
+---@param whichField itemstringfield
+---@param value string
+---@return boolean
+function class:setStringField(whichField, value)
+    return BlzSetItemStringField(self.handle, whichField, value)
 end
 
 ---@param whichField itemstringfield

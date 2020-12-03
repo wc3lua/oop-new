@@ -13,7 +13,7 @@ end
 ---@param whichItem Item
 ---@param abilCode integer|string
 function class:fromItem(whichItem, abilCode)
-    return self:new(BlzGetItemAbility(whichItem.handle, FormatCC(abilCode)))
+    return self:new(BlzGetItemAbility(whichItem.handle, formatCC(abilCode)))
 end
 
 ---@param whichItem Item
@@ -22,6 +22,17 @@ function class:fromByIndexItem(whichItem, index)
     return self:new(BlzGetItemAbilityByIndex(whichItem.handle, index))
 end
 
+---@param whichUnit Unit
+---@param abilCode integer|string
+function class:fromUnit(whichUnit, abilCode)
+    return self:new(BlzGetUnitAbility(whichUnit.handle, formatCC(abilCode)))
+end
+
+---@param whichUnit Unit
+---@param index integer
+function class:fromByIndexUnit(whichUnit, index)
+    return self:new(BlzGetUnitAbilityByIndex(whichUnit.handle, index))
+end
 
 ---@param abilCode integer
 ---@param tooltip string

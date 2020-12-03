@@ -1,6 +1,5 @@
 ---@class Location:handle
 ClassLocation = extendedClass(ClassHandle)
-
 local class = ClassLocation
 
 ---@param locationHandle location
