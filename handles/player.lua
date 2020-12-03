@@ -219,7 +219,7 @@ end
 ---@param techid integer|string
 ---@param maximum integer|nil
 function class:techMaxAllowed(techid, maximum)
-    techid = formatCC(techid)
+    techid = formatIntCC(techid)
     if  not maximum then
         return GetPlayerTechMaxAllowed(self.handle, techid)
     else
@@ -231,14 +231,14 @@ end
 ---@param techid integer|string
 ---@param levels integer
 function class:addTechResearched(techid, levels)
-    AddPlayerTechResearched(self.handle, formatCC(techid), levels)
+    AddPlayerTechResearched(self.handle, formatIntCC(techid), levels)
     return self
 end
 
 ---@param techid integer|string
 ---@param levels integer
 function class:decTechResearched(techid, levels)
-    BlzDecPlayerTechResearched(self.handle, formatCC(techid), levels)
+    BlzDecPlayerTechResearched(self.handle, formatIntCC(techid), levels)
     return self
 end
 
@@ -258,7 +258,7 @@ end
 ---@param specificonly boolexpr
 ---@return integer
 function class:techCount(techid, specificonly)
-    return GetPlayerTechCount(self.handle, formatCC(techid), specificonly)
+    return GetPlayerTechCount(self.handle, formatIntCC(techid), specificonly)
 end
 
 ---@param newOwner integer

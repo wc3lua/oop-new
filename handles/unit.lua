@@ -19,7 +19,7 @@ end
 ---@param y real
 ---@param face real
 function class:atCoordsCreate(id, unitid, x, y, face)
-    return self:new(CreateUnit(id.handle, formatCC(unitid), x, y, face))
+    return self:new(CreateUnit(id.handle, formatIntCC(unitid), x, y, face))
 end
 
 ---@param whichPlayer Player
@@ -36,7 +36,7 @@ end
 ---@param whichLocation Location
 ---@param face real
 function class:atLocCreate(id, unitid, whichLocation, face)
-    return self:new(CreateUnitAtLoc(id.handle, formatCC(unitid), whichLocation.handle, face))
+    return self:new(CreateUnitAtLoc(id.handle, formatIntCC(unitid), whichLocation.handle, face))
 end
 
 ---@param id Player
@@ -61,7 +61,7 @@ end
 ---@param y real
 ---@param face real
 function class:corpseCreate(whichPlayer, unitid, x, y, face)
-    return self:new(CreateCorpse(whichPlayer.handle, formatCC(unitid), x, y, face))
+    return self:new(CreateCorpse(whichPlayer.handle, formatIntCC(unitid), x, y, face))
 end
 
 ---@param whichPlayer Player
@@ -452,14 +452,14 @@ end
 
 ---@param abilcode integer|string
 function class:selectHeroSkill(abilcode)
-    SelectHeroSkill(self.handle, formatCC(abilcode))
+    SelectHeroSkill(self.handle, formatIntCC(abilcode))
     return self
 end
 
 ---@param abilcode integer|string
 ---@param level integer|nil
 function class:abilityLevel(abilcode, level)
-    abilcode = formatCC(abilcode)
+    abilcode = formatIntCC(abilcode)
     if  not level then
         return GetUnitAbilityLevel(self.handle, abilcode)
     else
@@ -471,13 +471,13 @@ end
 ---@param abilcode integer|nil
 ---@return integer
 function class:decAbilityLevel(abilcode)
-    return DecUnitAbilityLevel(self.handle, formatCC(abilcode))
+    return DecUnitAbilityLevel(self.handle, formatIntCC(abilcode))
 end
 
 ---@param abilcode integer|nil
 ---@return integer
 function class:incAbilityLevel(abilcode)
-    return IncUnitAbilityLevel(self.handle, formatCC(abilcode))
+    return IncUnitAbilityLevel(self.handle, formatIntCC(abilcode))
 end
 
 ---@param x real
@@ -568,14 +568,14 @@ end
 ---@param itemId integer|string
 ---@return item
 function class:addByIdItem(itemId)
-    return ClassItem:new(UnitAddItemById(self.handle, formatCC(itemId)))
+    return ClassItem:new(UnitAddItemById(self.handle, formatIntCC(itemId)))
 end
 
 ---@param itemId integer|string
 ---@param itemSlot integer
 ---@return boolean
 function class:addToSlotByIdItem(itemId, itemSlot)
-    return UnitAddItemToSlotById(self.handle, formatCC(itemId), itemSlot)
+    return UnitAddItemToSlotById(self.handle, formatIntCC(itemId), itemSlot)
 end
 
 ---@param whichItem Item
@@ -743,13 +743,13 @@ end
 ---@param unitId integer|string
 ---@return integer
 function class:getFoodMade(unitId)
-    return GetFoodMade(formatCC(unitId))
+    return GetFoodMade(formatIntCC(unitId))
 end
 
 ---@param unitId integer|string
 ---@return integer
 function class:getFoodUsed(unitId)
-    return GetFoodUsed(formatCC(unitId))
+    return GetFoodUsed(formatIntCC(unitId))
 end
 
 ---@param useFood boolean
@@ -906,14 +906,14 @@ end
 ---@param unitId integer|string
 ---@return boolean
 function class:isHeroId(unitId)
-    return IsHeroUnitId(formatCC(unitId))
+    return IsHeroUnitId(formatIntCC(unitId))
 end
 
 ---@param unitId integer|string
 ---@param whichUnitType unittype
 ---@return boolean
 function class:isIdType(unitId, whichUnitType)
-    return IsUnitIdType(formatCC(unitId), whichUnitType)
+    return IsUnitIdType(formatIntCC(unitId), whichUnitType)
 end
 
 ---@param whichPlayer Player
@@ -944,20 +944,20 @@ end
 ---@param abilityId integer|string
 ---@return boolean
 function class:addAbility(abilityId)
-    return UnitAddAbility(self.handle, formatCC(abilityId))
+    return UnitAddAbility(self.handle, formatIntCC(abilityId))
 end
 
 ---@param abilityId integer|string
 ---@return boolean
 function class:removeAbility(abilityId)
-    return UnitRemoveAbility(self.handle, formatCC(abilityId))
+    return UnitRemoveAbility(self.handle, formatIntCC(abilityId))
 end
 
 ---@param abilityId integer|string
 ---@param permanent boolean
 ---@return boolean
 function class:makeAbilityPermanent(abilityId, permanent)
-    return UnitMakeAbilityPermanent(self.handle, permanent, formatCC(abilityId))
+    return UnitMakeAbilityPermanent(self.handle, permanent, formatIntCC(abilityId))
 end
 
 ---@param removePositive boolean
@@ -1038,7 +1038,7 @@ end
 ---@param buffId integer|string
 ---@param duration real
 function class:applyTimedLife(buffId, duration)
-    UnitApplyTimedLife(self.handle, formatCC(buffId), duration)
+    UnitApplyTimedLife(self.handle, formatIntCC(buffId), duration)
     return self
 end
 
@@ -1451,14 +1451,14 @@ end
 ---@param currentStock integer
 ---@param stockMax integer
 function class:addItemToAllStock(itemId, currentStock, stockMax)
-    AddItemToAllStock(formatCC(itemId), currentStock, stockMax)
+    AddItemToAllStock(formatIntCC(itemId), currentStock, stockMax)
 end
 
 ---@param itemId integer|string
 ---@param currentStock integer
 ---@param stockMax integer
 function class:addItemToStock(itemId, currentStock, stockMax)
-    AddItemToStock(self.handle, formatCC(itemId), currentStock, stockMax)
+    AddItemToStock(self.handle, formatIntCC(itemId), currentStock, stockMax)
     return self
 end
 
@@ -1466,36 +1466,36 @@ end
 ---@param currentStock integer
 ---@param stockMax integer
 function class:addToAllStock(unitId, currentStock, stockMax)
-    AddUnitToAllStock(formatCC(unitId), currentStock, stockMax)
+    AddUnitToAllStock(formatIntCC(unitId), currentStock, stockMax)
 end
 
 ---@param unitId integer|string
 ---@param currentStock integer
 ---@param stockMax integer
 function class:addToStock(unitId, currentStock, stockMax)
-    AddUnitToStock(self.handle, formatCC(unitId), currentStock, stockMax)
+    AddUnitToStock(self.handle, formatIntCC(unitId), currentStock, stockMax)
     return self
 end
 
 ---@param itemId integer|string
 function class:removeItemFromAllStock(itemId)
-    RemoveItemFromAllStock(formatCC(itemId))
+    RemoveItemFromAllStock(formatIntCC(itemId))
 end
 
 ---@param itemId integer|string
 function class:removeItemFromStock(itemId)
-    RemoveItemFromStock(self.handle, formatCC(itemId))
+    RemoveItemFromStock(self.handle, formatIntCC(itemId))
     return self
 end
 
 ---@param unitId integer|string
 function class:removeFromAllStock(unitId)
-    RemoveUnitFromAllStock(formatCC(unitId))
+    RemoveUnitFromAllStock(formatIntCC(unitId))
 end
 
 ---@param unitId integer|string
 function class:removeFromStock(unitId)
-    RemoveUnitFromStock(self.handle, formatCC(unitId))
+    RemoveUnitFromStock(self.handle, formatIntCC(unitId))
 end
 
 ---@param slots integer
@@ -1625,7 +1625,7 @@ end
 ---@param abilId integer|string
 ---@param flag boolean
 function class:hideAbility(abilId, flag)
-    BlzUnitHideAbility(self.handle, formatCC(abilId), flag)
+    BlzUnitHideAbility(self.handle, formatIntCC(abilId), flag)
     return self
 end
 
@@ -1633,7 +1633,7 @@ end
 ---@param flag boolean
 ---@param hideUI boolean
 function class:disableAbility(abilId, flag, hideUI)
-    BlzUnitDisableAbility(self.handle, formatCC(abilId), flag, hideUI)
+    BlzUnitDisableAbility(self.handle, formatIntCC(abilId), flag, hideUI)
     return self
 end
 
@@ -1666,7 +1666,7 @@ end
 ---@param level integer
 ---@param cooldown real
 function class:setAbilityCooldown(abilId, level, cooldown)
-    BlzSetUnitAbilityCooldown(self.handle, formatCC(abilId), level, cooldown)
+    BlzSetUnitAbilityCooldown(self.handle, formatIntCC(abilId), level, cooldown)
     return self
 end
 
@@ -1674,18 +1674,18 @@ end
 ---@param level integer
 ---@return real
 function class:getAbilityCooldown(abilId, level)
-    return BlzGetAbilityCooldown(formatCC(abilId), level)
+    return BlzGetAbilityCooldown(formatIntCC(abilId), level)
 end
 
 ---@param abilId integer|string
 ---@return real
 function class:getAbilityCooldownRemaining(abilId)
-    return BlzGetUnitAbilityCooldownRemaining(self.handle, formatCC(abilId))
+    return BlzGetUnitAbilityCooldownRemaining(self.handle, formatIntCC(abilId))
 end
 
 ---@param abilCode integer|string
 function class:EndAbilityCooldown(abilCode)
-    BlzEndUnitAbilityCooldown(self.handle, formatCC(abilCode))
+    BlzEndUnitAbilityCooldown(self.handle, formatIntCC(abilCode))
     return self
 end
 
@@ -1693,14 +1693,14 @@ end
 ---@param level integer
 ---@return integer
 function class:getAbilityManaCost(abilId, level)
-    return BlzGetAbilityManaCost(formatCC(abilId), level)
+    return BlzGetAbilityManaCost(formatIntCC(abilId), level)
 end
 
 ---@param abilId integer|string
 ---@param level integer
 ---@param manaCost integer
 function class:setAbilityManaCost(abilId, level, manaCost)
-    BlzSetUnitAbilityManaCost(self.handle, formatCC(abilId), level, manaCost)
+    BlzSetUnitAbilityManaCost(self.handle, formatIntCC(abilId), level, manaCost)
     return self
 end
 

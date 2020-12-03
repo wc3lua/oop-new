@@ -20,7 +20,7 @@ end
 ---@param scale real
 ---@param variation integer
 function class:coordsCreate(objectid, x, y, face, scale, variation)
-    return self:new(CreateDestructable(formatCC(objectid), x, y, face, scale, variation))
+    return self:new(CreateDestructable(formatIntCC(objectid), x, y, face, scale, variation))
 end
 
 ---@param objectid integer|string
@@ -31,7 +31,7 @@ end
 ---@param scale real
 ---@param variation integer
 function class:coordsWithZCreate(objectid, x, y, z, face, scale, variation)
-    return self:new(CreateDestructableZ(formatCC(objectid), x, y, z, face, scale, variation))
+    return self:new(CreateDestructableZ(formatIntCC(objectid), x, y, z, face, scale, variation))
 end
 
 ---@param objectid integer|string
@@ -59,7 +59,7 @@ end
 ---@param scale real
 ---@param variation integer
 function class:deadCoordsCreate(objectid, x, y, face, scale, variation)
-    return self:new(CreateDeadDestructable(formatCC(objectid), x, y, face, scale, variation))
+    return self:new(CreateDeadDestructable(formatIntCC(objectid), x, y, face, scale, variation))
 end
 
 ---@param objectid integer|string
@@ -70,7 +70,7 @@ end
 ---@param scale real
 ---@param variation integer
 function class:deadCoordsWithZCreate(objectid, x, y, z, face, scale, variation)
-    return self:new(CreateDeadDestructableZ(formatCC(objectid), x, y, z, face, scale, variation))
+    return self:new(CreateDeadDestructableZ(formatIntCC(objectid), x, y, z, face, scale, variation))
 end
 
 ---@param objectid integer|string
