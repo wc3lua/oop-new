@@ -1,7 +1,6 @@
 ---@class Handle
-ClassHandle = newClass()
-
-local class = ClassHandle
+Handle = newClass()
+local class = Handle
 
 ---@param handle handle
 ---@return Handle

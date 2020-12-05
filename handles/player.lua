@@ -1,6 +1,5 @@
 ---@class Player:Handle
-ClassPlayer = extendedClass(ClassHandle)
-
+ClassPlayer = extendedClass(Handle)
 local class = ClassPlayer
 
 ---@param playerHandle player

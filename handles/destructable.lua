@@ -3,8 +3,8 @@
 -- Facing arguments are specified in degrees
 
 ---@class Destructable:Widget
-ClassDestructable = extendedClass(ClassWidget)
-local class = ClassDestructable
+Destructable = extendedClass(Widget)
+local class = Destructable
 
 ---@param destructableHandle destructable
 ---@return Destructable

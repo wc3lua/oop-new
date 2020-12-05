@@ -1,7 +1,6 @@
 ---@class Rect:Handle
-ClassRect = extendedClass(ClassHandle)
-
-local class = ClassRect
+Rect = extendedClass(Handle)
+local class = Rect
 
 ---@param rectHandle rect
 ---@return Rect

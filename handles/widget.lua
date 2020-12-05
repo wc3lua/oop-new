@@ -2,9 +2,8 @@
 -- Widget API
 
 ---@class Widget:Handle
-ClassWidget = extendedClass(ClassHandle)
-
-local class = ClassWidget
+Widget = extendedClass(Handle)
+local class = Widget
 
 ---@param widgetHandle widget
 ---@return Widget

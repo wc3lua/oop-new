@@ -1,9 +1,8 @@
 --============================================================================
 -- Item API
 ---@class Item:Widget
-ClassItem = extendedClass(Widget)
-
-local class = ClassItem
+Item = extendedClass(Widget)
+local class = Item
 
 ---@param itemHandle item
 ---@return Item

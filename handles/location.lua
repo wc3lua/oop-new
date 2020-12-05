@@ -1,6 +1,6 @@
 ---@class Location:handle
-ClassLocation = extendedClass(ClassHandle)
-local class = ClassLocation
+HLocation = extendedClass(Handle)
+local class = HLocation
 
 ---@param locationHandle location
 ---@return Location
@@ -95,7 +95,7 @@ function class:isContainsCoords(x, y)
     return IsPointInRegion(self.handle, x, y)
 end
 
----@param whichPoint ClassPoint
+---@param whichPoint Point
 ---@return boolean
 function class:isContainsPoint(whichPoint)
     return self:isContainsCoords(whichPoint.coordX, whichPoint.coordY)
@@ -113,4 +113,4 @@ function class:isContainsUnit(whichUnit)
     return IsUnitInRegion(self.handle, whichUnit.handle)
 end
 
-tempLocation = ClassLocation:alloc(0,0)
+tempLocation = HLocation:alloc(0,0)

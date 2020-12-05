@@ -2,9 +2,8 @@
 -- Force API
 --
 ---@class Force:Handle
-ClassForce = extendedClass(ClassHandle)
-
-local class = ClassForce
+Force = extendedClass(Handle)
+local class = Force
 
 ---@param forceHandle force
 ---@return Force

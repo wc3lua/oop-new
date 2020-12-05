@@ -1,14 +1,6 @@
----@class IdAbility
-ClassIdAbility = newClass()
-local class = ClassIdAbility
-
----@param id integer|string
----@return IdAbility
-function class:new(id)
-    self.id = formatIntCC(id)
-    self.stringId = formatStringCC(id)
-    return newObject(self)
-end
+---@class IdAbility:Rawcode
+IdAbility = extendedClass(RawCode)
+local class = IdAbility
 
 ---@param tooltip string
 ---@param level integer

@@ -1,7 +1,6 @@
 ---@class Point
-ClassPoint = newClass()
-
-local class = ClassPoint
+Point = newClass()
+local class = Point
 
 ---@param x real
 ---@param y real

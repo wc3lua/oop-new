@@ -1,8 +1,8 @@
 --============================================================================
 -- Group API
 ---@class Group:Handle
-ClassGroup = extendedClass(ClassHandle)
-local class = ClassGroup
+Group = extendedClass(Handle)
+local class = Group
 
 ---@param groupHandle group
 ---@return Group
@@ -56,7 +56,7 @@ end
 
 ---@param index integer
 function class:unitAt(index)
-    return ClassUnit:new(BlzGroupUnitAt(self.handle, index))
+    return Unit:new(BlzGroupUnitAt(self.handle, index))
 end
 
 ---@param unitname string
@@ -235,5 +235,5 @@ function class:forEach(callback)
 end
 
 function class:getFirst()
-    return ClassUnit:new(FirstOfGroup(self.handle))
+    return Unit:new(FirstOfGroup(self.handle))
 end

@@ -2,8 +2,8 @@
 -- Unit API
 
 ---@class Unit:Widget
-ClassUnit = extendedClass(ClassWidget)
-local class = ClassUnit
+Unit = extendedClass(Widget)
+local class = Unit
 
 ---@param unitHandle unit
 ---@return Unit

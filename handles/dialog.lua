@@ -2,9 +2,8 @@
 -- Dialog API
 
 ---@class Dialog:Handle
-ClassDialog = extendedClass(ClassHandle)
-
-local class = ClassDialog
+Dialog = extendedClass(Handle)
+local class = Dialog
 
 ---@param dialogHandle dialog
 ---@return Dialog

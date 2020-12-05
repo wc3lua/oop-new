@@ -1,0 +1,7 @@
+require 'modules.oop-new.API.automation test'
+require 'modules.oop-new.API.campaign'
+require 'modules.oop-new.API.cheat'
+require 'modules.oop-new.API.cine filter'
+require 'modules.oop-new.API.cinematic'
+require 'modules.oop-new.API.computer AI interface'
+require 'modules.oop-new.API.doodad'

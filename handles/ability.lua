@@ -1,7 +1,6 @@
 ---@class Ability:Handle
-ClassAbility = extendedClass(Handle)
-
-local class = ClassAbility
+Ability = extendedClass(Handle)
+local class = Ability
 
 ---@param abilityHandle ability
 ---@return Ability

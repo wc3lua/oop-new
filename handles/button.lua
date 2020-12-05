@@ -1,7 +1,6 @@
 ---@class Button:Handle
-ClassButton = extendedClass(ClassHandle)
-
-local class = ClassButton
+Button = extendedClass(Handle)
+local class = Button
 
 ---@param buttonHandle button
 ---@return Button
