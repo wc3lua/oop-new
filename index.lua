@@ -1,6 +1,7 @@
 -- зависимости
 require 'modules.other-functions.index'
 require 'modules.oop-functions.index'
+require 'modules.native-types.index'
 
 -- содержимое
 
