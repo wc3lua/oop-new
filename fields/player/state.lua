@@ -1,6 +1,9 @@
+---@class PlayerState:Convert
 PlayerState = extendedClass(ClassConvert)
 local class = PlayerState
 
+---@param i integer
+---@return playerstate
 function class:convert(i)
     return ConvertPlayerState(i)
 end

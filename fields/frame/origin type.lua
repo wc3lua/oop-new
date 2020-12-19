@@ -1,6 +1,9 @@
+---@class TypeOriginFrame:ClassConvert
 TypeOriginFrame = extendedClass(ClassConvert)
 local class = TypeOriginFrame
 
+---@param i integer
+---@return originframetype
 function class:convert(i)
     return ConvertOriginFrameType(i)
 end

@@ -1,6 +1,9 @@
+---@class ClassWarObjects
 ClassWarObjects = newClass()
+---@class WarObjects
 
 local class = ClassWarObjects
+---@return WarObjects
 function class:new()
     return newObject(self)
 end
@@ -21,12 +24,14 @@ class.isDirty = false
 -- * Reads WC3 objects from the supplied string into this object.
 -- * The expected format is that of WC3 object data files, which is the same for all object data types.
 -- */
+---@param data string
 function class:readFromString(data) end
 
 -- /**
 -- * Writes the WC3 objects contained in this object out into the string.
 -- * The resulting format is that of WC3 object data files, which is the same for all object data types.
 -- */
+---@return string
 function class:writeToString() end
 
 -- /**
@@ -50,6 +55,8 @@ function class:writeToString() end
 -- * myPea['Name'] = "Arnold"
 -- * currentMap.objects.units['yyyy'] = myPea
 -- */
+---@param rawid string
+---@return WarObject
 function class:getObject(rawid) end
 
 -- /**
@@ -65,4 +72,6 @@ function class:getObject(rawid) end
 -- *
 -- * See `getObject` fore example usage.
 -- */
+---@param rawid string
+---@param object WarObject
 function class:setObject(rawid,object) end

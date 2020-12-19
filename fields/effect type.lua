@@ -2,9 +2,12 @@
 -- Effect API s
 --===================================================
 
+---@class TypeEffect:Convert
 TypeEffect = extendedClass(ClassConvert)
 local class = TypeEffect
 
+---@param i integer
+---@return effecttype
 function class:convert(i)
     return ConvertEffectType(i)
 end

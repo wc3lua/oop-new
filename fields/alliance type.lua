@@ -1,6 +1,9 @@
+---@class TypeAlliance:ClassConvert
 TypeAlliance = extendedClass(ClassConvert)
 local class = TypeAlliance
 
+---@param i integer
+---@return alliancetype
 function class:convert(i)
     return ConvertAllianceType(i)
 end

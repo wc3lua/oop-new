@@ -1,3 +1,4 @@
+---@class CameraMargin:ClassConvert
 CameraMargin = extendedClass(ClassConvert)
 local class = CameraMargin
 

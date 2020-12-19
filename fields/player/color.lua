@@ -1,6 +1,9 @@
+---@class PlayerColor:Convert
 PlayerColor = extendedClass(ClassConvert)
 local class = PlayerColor
 
+---@param i integer
+---@return playercolor
 function class:convert(i)
     return ConvertPlayerColor(i)
 end

@@ -1,6 +1,9 @@
+---@class TypePointFrame:ClassConvert
 TypePointFrame = extendedClass(ClassConvert)
 local class = TypePointFrame
 
+---@param i integer
+---@return framepointtype
 function class:convert(i)
     return ConvertFramePointType(i)
 end

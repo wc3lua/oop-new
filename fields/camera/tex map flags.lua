@@ -1,6 +1,9 @@
+---@class TexMapFlags:ClassConvert
 TexMapFlags = extendedClass(ClassConvert)
 local class = TexMapFlags
 
+---@param i integer
+---@return texmapflags
 function class:convert(i)
     return ConvertTexMapFlags(i)
 end

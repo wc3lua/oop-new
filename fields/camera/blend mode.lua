@@ -1,6 +1,9 @@
+---@class BlendMode:ClassConvert
 BlendMode = extendedClass(ClassConvert)
 local class = BlendMode
 
+---@param i integer
+---@return blendmode
 function class:convert(i)
     return ConvertBlendMode(i)
 end

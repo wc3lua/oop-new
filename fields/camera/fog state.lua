@@ -1,6 +1,9 @@
+---@class FogState:ClassConvert
 FogState = extendedClass(ClassConvert)
 local class = FogState
 
+---@param i integer
+---@return fogstate
 function class:convert(i)
     return ConvertFogState(i)
 end

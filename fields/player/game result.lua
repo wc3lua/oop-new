@@ -1,6 +1,9 @@
+---@class PlayerGameResult:Convert
 PlayerGameResult = extendedClass(ClassConvert)
 local class = PlayerGameResult
 
+---@param i integer
+---@return playergameresult
 function class:convert(i)
     return ConvertPlayerGameResult(i)
 end
