@@ -1,9 +1,6 @@
----@class TypeTextAlign:ClassConvert
 TypeTextAlign = extendedClass(ClassConvert)
 local class = TypeTextAlign
 
----@param i integer
----@return textaligntype
 function class:convert(i)
     return ConvertTextAlignType(i)
 end

@@ -1,9 +1,6 @@
----@class CameraField:ClassConvert
 CameraField = extendedClass(ClassConvert)
 local class = CameraField
 
----@param i integer
----@return camerafield
 function class:convert(i)
     return ConvertCameraField(i)
 end

@@ -1,9 +1,6 @@
----@class ClassWarObject
 ClassWarObject = newClass()
----@class WarObject
 
 local class = ClassWarObject
----@return WarObject
 function class:new()
     return newObject(self)
 end
@@ -16,7 +13,7 @@ class.id = ''
 
 -- Parent's id as a string. Undefined if this object has no parent, i.e. 
 -- it is defined by WC3 data itself.
-class.parentId = '' ---@type string|nil
+class.parentId = ''
 
 -- This object's type.
 class.type = ''
@@ -24,7 +21,6 @@ class.type = ''
 -- Clones this object, creating an independent instance of it.
 -- This instance can then be assigned into a `WarObjects` object
 -- to insert it into the map.
----@return WarObject
 function class:clone() end
 
 -- /**
@@ -47,8 +43,6 @@ function class:clone() end
 --  *
 --  * Setting a field into null/undefined will reset it to its default value.
 --  */
----@param field string
----@return string|number
 function class:getField(field) end
 
 -- /**
@@ -58,6 +52,4 @@ function class:getField(field) end
 --  *
 --  * Setting a field into null/undefined will reset it to its default value.
 --  */
----@param field string
----@param value string|number
 function class:setField(field,value) end

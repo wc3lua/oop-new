@@ -1,9 +1,6 @@
----@class Race:Convert
 Race = extendedClass(ClassConvert)
 local class = Race
 
----@param i integer
----@return race
 function class:convert(i)
     return ConvertRace(i)
 end

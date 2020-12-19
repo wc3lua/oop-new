@@ -1,12 +1,9 @@
 --============================================================================
 -- Dialog API
-
 ---@class Dialog:Handle
 Dialog = extendedClass(Handle)
 local class = Dialog
 
----@param dialogHandle dialog
----@return Dialog
 function class:new(dialogHandle)
     self.handle = dialogHandle
     return newObject(self)
@@ -26,27 +23,19 @@ function class:clear()
     return self
 end
 
----@param messageText string
 function class:setMessage(messageText)
     DialogSetMessage(self.handle, messageText)
     return self
 end
 
----@param buttonText string
----@param hotkey integer
 function class:addButton(buttonText, hotkey)
     return ClassButton:new(DialogAddButton(self.handle, buttonText, hotkey))
 end
 
----@param doScoreScreen boolean
----@param buttonText string
----@param hotkey integer
 function class:addQuitButton(doScoreScreen, buttonText, hotkey)
     return ClassButton:new(DialogAddQuitButton(self.handle, doScoreScreen, buttonText, hotkey))
 end
 
----@param whichPlayer Player
----@param flag boolean
 function class:display(whichPlayer, flag)
     DialogDisplay(whichPlayer.handle, self.handle, flag)
     return self

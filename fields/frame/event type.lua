@@ -1,9 +1,6 @@
----@class TypeEventFrame:ClassConvert
 TypeEventFrame = extendedClass(ClassConvert)
 local class = TypeEventFrame
 
----@param i integer
----@return frameeventtype
 function class:convert(i)
     return ConvertFrameEventType(i)
 end
