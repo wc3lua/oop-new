@@ -4,6 +4,7 @@ require 'modules.oop-functions.index'
 require 'modules.native-types.index'
 
 -- содержимое
+require 'modules.oop-new.types'
 
 -- объекты РО
 require 'modules.oop-new.objects.index'

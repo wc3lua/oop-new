@@ -7,78 +7,63 @@ local class = Point
 ---@param z real
 ---@return Point
 function class:new(x, y, z)
-    self.coordX = defaultValue(x, 0)
-    self.coordY = defaultValue(y, 0)
-    self.coordZ = defaultValue(z, 0)
+    self.x = x
+    self.y = y
+    self.z = z
     return newObject(self)
-end
-
----@param x real
-function class:x(x)
-    if  not x then
-        return self.coordX
-    else
-        self.coordX = x
-        return self
-    end
-end
-
----@param y real
-function class:y(y)
-    if  not y then
-        return self.coordY
-    else
-        self.coordY = y
-        return self
-    end
-end
-
----@param z real
-function class:z(z)
-    if  not z then
-        return self.coordZ
-    else
-        self.coordZ = z
-        return self
-    end
 end
 
 ---@return real
 function class:getX()
-    return self.coordX
+    return self.x
 end
 
 ---@return real
 function class:getY()
-    return self.coordY
+    return self.y
 end
 
 ---@return real
 function class:getZ()
-    return self.coordZ
+    return self.z
 end
 
 ---@param x real
 function class:setX(x)
-    return self:x(x)
+    self.x = x
+    return self
 end
 
 ---@param y real
 function class:setY(y)
-    return self:y(y)
+    self.y = y
+    return self
+end
+
+---@param z real
+function class:setZ(z)
+    self.z = z
+    return self
 end
 
 ---@param x real
 ---@param y real
 ---@param z real
-function class:move(x,y,z)
-    self.coordX = x
-    self.coordY = y
-    self.coordZ = z
+function class:moveCoords(x, y, z)
+    self:setX(x)
+    self:setY(y)
+    self:setZ(z)
     return self
+end
+
+---@alias Pointable Location|Point
+
+---@param p Pointable
+function class:movePos(p)
+    return self:moveCoords(p:getX(), p:getY(), p:getZ())
 end
 
 ---@return boolean
 function class:isBlighted()
-    return IsPointBlighted(self.coordX, self.coordY)
+    return IsPointBlighted(self.x, self.y)
 end
